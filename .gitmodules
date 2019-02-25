@@ -1,0 +1,9 @@
+[submodule "ADNS-3050_Sensors/Adns-3050-Optical-Sensor"]
+	path = ADNS-3050_Sensors/Adns-3050-Optical-Sensor
+	url = https://github.com/Tom101222/Adns-3050-Optical-Sensor.git
+[submodule "ADNS-3050_Sensors/submodule/Adns-3050-Optical-Sensor"]
+	path = ADNS-3050_Sensors/submodule/Adns-3050-Optical-Sensor
+	url = https://github.com/Tom101222/Adns-3050-Optical-Sensor.git
+[submodule "ADNS-3050_Sensors/submodules/Adns-3050-Optical-Sensor"]
+	path = ADNS-3050_Sensors/submodules/Adns-3050-Optical-Sensor
+	url = https://github.com/Tom101222/Adns-3050-Optical-Sensor.git
