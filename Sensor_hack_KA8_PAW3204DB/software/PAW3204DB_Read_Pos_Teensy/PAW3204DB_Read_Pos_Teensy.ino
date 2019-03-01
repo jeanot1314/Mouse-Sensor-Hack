@@ -8,6 +8,8 @@
     You can set the resolution and sleep mode at the beginning. 
     The noise filter is here to avoid small values printing. 
 
+    The code is tested on Teensy 3.2, but it should work on any Arduino platform, just adapt the Pin number and be carrefull of tension level (No 5V!)
+
 */
 
 #define CLK_Pin 13

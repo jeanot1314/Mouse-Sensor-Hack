@@ -17,6 +17,8 @@ I bought several cheap mouses from Ebay and all the sensors seems to have "KA8" 
 Most website show only the 5 first pages of the datasheet, you can find the complete one here : http://www.icpdf.com/PIXART_datasheet/PAW3204DB_pdf_7295136/PAW3204DB_1.html
 
 It seem that we can't visualize the camera pixel on this chip... So for now we will only play with motions datas. 
+The mouse has been bought on Ebay here : https://www.ebay.com/itm/Slim-2-4GHz-Optical-Wireless-Mouse-USB-Receiver-for-Laptop-PC-Black-White/302810530756?hash=item4680ea03c4:m:mIS-Wv1Smw4agEdIxi5RvPw:rk:2:pf:1&frcectupt=true
+(if the link isn't working, you can find the same mouses easily on Ebay)
 
 Here is the Pinout
 
