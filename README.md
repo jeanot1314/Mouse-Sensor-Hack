@@ -20,3 +20,6 @@ In this project, I will play with several mouse sensors and try to get the mouve
 I will start with the ADNS-3050 because it's a well known architecture. Then I will try to read some KA8 sensors we commonly find in cheap Ebay mouses like this one: 
 
 ![Image of Pi](images/Hack_mouse_white_open.jpg)
+
+## UPDATE 28/02/2019
+The KA8 / PAW3204DB code is now fully functional. It can read the register and display mouvement. On this chip, it's not possible to have access to the pixels through register, so I will focus on ADNS-2610 now !
