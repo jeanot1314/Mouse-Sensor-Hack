@@ -19,21 +19,26 @@ Most website show only the 5 first pages of the datasheet, you can find the comp
 It seem that we can't visualize the camera pixel on this chip... So for now we will only play with motions datas. 
 
 Here is the Pinout
+
 ![Image of Pi](images/KA8_Pinout.png)
 
 First : wiring the channel SDIO and Clock
+
 ![Image of Pi](images/Mouse_Hack_Wire.jpg)
 
 Here are the original datas on the sensors. 
 In blue we have the Clock (2 bytes) and in yellow the datas. On the first byte, the controller is sending the register number for reading. (0x02) 
 On the second byte, the sensor answer 0x84. The 8 mean "mouvement datas available" and the 4 is the actual resolution (bin 100 = 1000 CPI) 
+
 ![Image of Pi](images/Original_read_Motion_status.png)
 
 
 After a bit of code, I cut the lines between the controller and the sensor and wired directly my Teensy 3.2 board to the sensor. 
 Here is the signals : 
+
 ![Image of Pi](images/Teensy_Read_Motion_status.png)
 
 And when I read the X and Y register I get this output on serial
+
 ![Image of Pi](images/Output_On_Serial_Terminal.png)
 
