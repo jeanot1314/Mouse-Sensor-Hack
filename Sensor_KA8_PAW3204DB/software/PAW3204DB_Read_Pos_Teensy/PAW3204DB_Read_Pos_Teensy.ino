@@ -1,12 +1,12 @@
 
 /*
- *  Author : Jean Perardel
- *  
- *  Communication code between Teensy board and PAW3204DB sensor. 
- *  The code should work with any Arduino board. Just set the appropriate Pin
- *  
- *  The function write_register isn't working yet. But I am on it !
- * 
+    Author : Jean Perardel
+
+    Communication code between Teensy board and PAW3204DB sensor.
+    The code should work with any Arduino board. Just set the appropriate Pin
+
+    The function write_register isn't working yet. But I am on it !
+
 */
 
 #define CLK_Pin 13
@@ -20,6 +20,7 @@
 #define reg_Delta_Y 0x04
 #define reg_Operation_Mode 0x05
 #define reg_Configuration 0x06
+#define reg_Write_Protect 0x09
 
 uint8_t read_reg(uint8_t reg);
 
@@ -55,16 +56,23 @@ void setup() {
   // Remove sleep mode but keep LED alive (default 0xB8, no sleep = 0xA0)
   //write_reg(reg_Operation_Mode, 0b10100000)
   // Change the resolution Value (default 0x04, max 0x07, min 0x00)
-  Serial.println("Changing resolution configuration :");
-  uint8_t value = 0x07;
-  uint8_t tmp = read_reg(reg_Configuration);
-    Serial.println(tmp, BIN);
-    delay(20);
-    write_reg(reg_Configuration, value);
-    delay(20);
-    tmp = read_reg(reg_Configuration);
-    Serial.println(tmp, BIN);
-    delay(20);
+  Serial.println("Reading several register configuration");
+  uint8_t tmp = read_reg(reg_Write_Protect);
+  Serial.print("Write protect register value : ");
+  Serial.println(tmp, BIN);
+  delay(20);
+
+  tmp = read_reg(reg_Configuration);
+  Serial.print("Configuration register value : ");
+  Serial.println(tmp, BIN);
+  delay(20);
+
+  Serial.print("Changing the configuration value : ");
+  write_reg(reg_Configuration, value);
+  delay(20);
+  tmp = read_reg(reg_Configuration);
+  delay(20);
+  Serial.println(tmp, BIN);
 
   Serial.println("Start reading position data : ");
 }
